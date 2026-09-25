@@ -1,0 +1,44 @@
+==============================================================================
+EXECUTIVE ENERGY BI DASHBOARD
+Reporting period: 2013-01-01 to 2013-12-31
+==============================================================================
+
+1. WHAT IS HAPPENING — CORE KPIs
+------------------------------------------------------------------------------
+  Total portfolio consumption      : 320,704 kWh
+  Meters monitored                 : 82
+  Avg. annual consumption / meter  : 3,911 kWh
+  Peak single day                  : 2013-01-18 (1,349 kWh)
+  Time spent in 'High' system demand: 4.5% of all periods
+
+2. WHERE IS IT GOING — TREND & FORECAST
+------------------------------------------------------------------------------
+  Seasonal swing (peak vs. trough month): 73%
+    Heaviest month: January  |  Lightest month: August
+  14-day forecast vs. trailing 14-day average: up 16.8%
+    Trailing avg: 975 kWh/day  ->  Forecast avg: 1,138 kWh/day
+    Forecast model accuracy (test MAPE): 2.7%
+
+3. WHY IS IT HAPPENING — KEY DRIVERS
+------------------------------------------------------------------------------
+  Heaviest-consuming region: Region A (4,392 kWh/meter/yr, vs. lightest Region D)
+  Top drivers of 'High' system demand periods (model feature importance):
+    - seasonal (month-of-year): 32% relative importance
+    - time-of-day: 30% relative importance
+    - underlying meter load: 22% relative importance
+
+4. RISKS & OPPORTUNITIES
+------------------------------------------------------------------------------
+  RISK: 'High' demand periods occur 4.5% of the time, driven mainly by seasonal (month-of-year) patterns — unplanned exposure here risks capacity strain or peak tariff costs.
+  RISK: Consumption swings 73% between August and January, requiring seasonal capacity buffers rather than flat provisioning.
+  OPPORTUNITY: Region D's lower per-meter load profile could be benchmarked and applied to Region A to curb the heaviest draw.
+  OPPORTUNITY: The near-term trend is up 16.8%, giving a window to pre-position capacity/procurement.
+
+5. RECOMMENDED ACTIONS
+------------------------------------------------------------------------------
+  1. Target demand-response programs at seasonal (month-of-year) peaks — the single largest predictor of High-demand risk — to flatten the load curve.
+  2. Prioritize efficiency/audit outreach in Region A, the highest per-meter consumer, for the fastest portfolio-wide reduction.
+  3. Provision additional capacity ahead of January-level seasonal peaks, using the forecast (±3% MAPE) as a planning baseline.
+  4. Monitor the 'High' demand risk score in near-real time (via the trained classifier) to trigger pre-emptive load-shedding or customer alerts before strain occurs.
+
+==============================================================================
