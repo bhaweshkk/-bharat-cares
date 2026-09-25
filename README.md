@@ -51,7 +51,7 @@ half-hour periods across 2013. The pipeline merges them to connect
 
 ## 2. Core KPIs, Drivers, Risks & Recommended Actions
 
-*(Exact figures are computed dynamically from your data each run — the
+*(Exact figures are computed dynamically from your data each run, the
 values below are what this pipeline produced on the included dataset.)*
 
 **Core KPIs**
@@ -60,11 +60,11 @@ values below are what this pipeline produced on the included dataset.)*
 
 **Identified Drivers** (from the trained risk classifier's feature
 importances)
-- **Seasonality (month of year)** — the strongest predictor of high-demand
+- **Seasonality (month of year)** - the strongest predictor of high-demand
   risk; consumption swings ~70%+ between the heaviest and lightest months.
-- **Time of day** — a sharp evening peak (roughly 5–8 PM) dominates the
+- **Time of day** - a sharp evening peak (roughly 5–8 PM) dominates the
   daily load curve on both weekdays and weekends.
-- **Regional variation** — one region consistently runs ~30–35% higher
+- **Regional variation** - one region consistently runs ~30–35% higher
   average consumption per meter than the lightest region, pointing to a
   structural (not just seasonal) driver.
 
@@ -160,12 +160,12 @@ judges get hover tooltips, zoom, and live filtering.
 ## 4. Design Notes
 
 - **Modeling choices are intentionally simple** (Random Forest regressor/classifier on
-  calendar + lag features) — the goal is a fast, interpretable, dependency-light
+  calendar + lag features) - the goal is a fast, interpretable, dependency-light
   pipeline suited to strategic decision-making, not a production forecasting system.
 - **Forecast validation** uses a chronological train/test split (the model must
   predict genuinely unseen future days).
 - **Risk-classifier validation** uses a stratified random split with cyclical
-  (sin/cos) encoding of hour/month — this model learns *recurring calendar
+  (sin/cos) encoding of hour/month - this model learns *recurring calendar
   patterns* rather than sequential future dependence, so a random split is the
   statistically appropriate choice and avoids tree-model extrapolation errors at
   year-end.
